@@ -10,7 +10,7 @@
     "lint:fix": "npx eslint --ext .ts . --fix"
   },
   "dependencies": {
-    "slash-create": "https://github.com/Snazzah/slash-create.git",
+    "slash-create": "^4.1.0",
     "typescript": "^4.4.2"
   },
   "devDependencies": {
