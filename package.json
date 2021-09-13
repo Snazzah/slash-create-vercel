@@ -1,0 +1,26 @@
+{
+  "name": "slash-create-vercel-template",
+  "version": "1.0.0",
+  "description": "A template for slash-create",
+  "private": true,
+  "scripts": {
+    "vercel-build": "tsc && node dist/scripts/sync",
+    "build": "tsc",
+    "lint": "npx eslint --ext .ts .",
+    "lint:fix": "npx eslint --ext .ts . --fix"
+  },
+  "dependencies": {
+    "slash-create": "https://github.com/Snazzah/slash-create.git",
+    "typescript": "^4.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.13",
+    "@typescript-eslint/eslint-plugin": "^4.31.0",
+    "@typescript-eslint/parser": "^4.31.0",
+    "@vercel/node": "^1.12.1",
+    "eslint": "^7.15.0",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1"
+  }
+}
