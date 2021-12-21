@@ -6,7 +6,6 @@
   "scripts": {
     "sync": "slash-up sync",
     "sync:dev": "slash-up sync -e development",
-    "vercel-build": "tsc && npx slash-up sync",
     "build": "tsc",
     "lint": "npx eslint --ext .ts .",
     "lint:fix": "npx eslint --ext .ts . --fix"
