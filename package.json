@@ -1,7 +1,7 @@
 {
   "name": "slash-create-vercel-template",
   "version": "1.0.0",
-  "description": "A template for slash-create",
+  "description": "A template for slash-create in Vercel",
   "private": true,
   "scripts": {
     "sync": "slash-up sync",
@@ -11,7 +11,7 @@
     "lint:fix": "npx eslint --ext .ts . --fix"
   },
   "dependencies": {
-    "slash-create": "^4.1.1"
+    "slash-create": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "^16.7.13",
@@ -22,7 +22,7 @@
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-prettier": "^3.3.0",
     "prettier": "^2.2.1",
-    "slash-up": "^1.0.5",
+    "slash-up": "^1.0.10",
     "typescript": "^4.4.2"
   }
 }
