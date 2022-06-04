@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>slash-create in Vercel</title>
+  <style>
+    body, html {
+      font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 1.6rem;
+      line-height: 1.65;
+      word-break: break-word;
+      font-kerning: auto;
+      font-variant: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      hyphens: auto;
+      height: 100vh;
+      height: -webkit-fill-available;
+      max-height: 100vh;
+      max-height: -webkit-fill-available;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100%;
+      background-color: #36393f;
+    }
+    main {
+      max-width: 80rem;
+      padding: 4rem 1rem;
+      margin: auto;
+    }
+    img {
+      height: 200px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: #0005 2px 2px 1px 1px;
+    }
+    h1 {
+      margin: 0;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    .subheading {
+      color: #b9bbbe;
+      font-weight: 400;
+      line-height: 26px;
+      font-size: 20px;
+      margin: 0;
+    }
+    .startbox {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+    }
+    input {
+      padding: 10px;
+      height: 40px;
+      width: 100%;
+      background-color: #2f3136;
+      border: 1px solid #040405;
+      border-radius: 3px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #f6f6f7;
+      -webkit-transition: background-color .15s ease,border .15s ease;
+      transition: background-color .15s ease,border .15s ease;
+      width: 100%;
+      font-size: 16px;
+      font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-weight: 300;
+    }
+    label {
+      margin-bottom: 8px;
+      color: #b9bbbe;
+      text-transform: uppercase;
+      line-height: 16px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    #copybtn {
+      background-color: #5865f2;
+      padding: 7px 16px;
+      border-radius: 3px;
+      font-size: 15px;
+      color: #fff;
+      border: none;
+      font-weight: 400;
+      line-height: 18px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      text-align: center;
+      -webkit-transition: all .17s ease-out;
+      transition: all .17s ease-out;
+      white-space: nowrap;
+      appearance: none;
+      margin-top: 8px;
+      width: fit-content;
+      font-family: Whitney,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    #copybtn:hover {
+      background-color: #3c45a5;
+    }
+    #copybtn.good {
+      background-color: #3ba55d;
+    }
+    #copybtn.bad {
+      background-color: #ed4245;
+    }
+    .linkbtns {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: 20px;
+    }
+    .linkbtns > * + * {
+      margin-right : 10px;
+    }
+    .linkbtn {
+      border: 1px solid hsla(0,0%,100%,.3);
+      color: #fff;
+      font-size: 14px;
+      letter-spacing: .3px;
+      border-radius: 3px;
+      padding: 11px 20px;
+      position: relative;
+      display: inline-block;
+      background: none;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      text-decoration: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      text-align: center;
+      -webkit-transition: all .17s ease-out;
+      transition: all .17s ease-out;
+      white-space: nowrap;
+    }
+    .linkbtn:hover {
+      border-color: hsla(0,0%,100%,.6);
+    }
+    .linkbtn:active {
+      border-color: #fff;
+    }
+    button:focus, .linkbtn:focus {
+      outline: none;
+      box-shadow: #00aff4 0px 0px 0px 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <main>
+      <div class="startbox">
+        <img src="https://assets-global.website-files.com/5f9072399b2640f14d6a2bf4/611af453901c9fadb4f7c4d6_1_veLGfNadk_WcJEnlAXY5zQ.png" draggable="false">
+        <h1>Your Vercel deployment is ready!</h1>
+        <p class="subheading">Copy the URL below to use in your bot's application page.</p>
+        <div class="input-wrapper">
+          <label>Interactions Endpoint URL</label>
+          <input id="interactionurl" placeholder="Loading..." disabled>
+          <button id="copybtn">Copy</button>
+        </div>
+        <div class="linkbtns">
+          <a rel="noreferrer noopener" href="https://slash-create.js.org/#/docs/main/latest/general/welcome" class="linkbtn">slash-create Documentation</a>
+          <a rel="noreferrer noopener" href="https://github.com/Snazzah/slash-create-vercel" class="linkbtn">View Template</a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script>
+    const copybtn = document.querySelector('#copybtn');
+    const input = document.querySelector('#interactionurl');
+    let currentAnim = null;
+
+    function displayResult(good = true) {
+      if (currentAnim) clearTimeout(currentAnim);
+
+      if (good) {
+        copybtn.className = "good";
+        copybtn.innerHTML = "Copied";
+      } else {
+        copybtn.className = "bad";
+        copybtn.innerHTML = "Failed to copy";
+      }
+      currentAnim = setTimeout(() => {
+        copybtn.className = "";
+        copybtn.innerHTML = "Copy";
+      }, 3000);
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard) return navigator.clipboard.writeText(text);
+    }
+
+    copybtn.addEventListener('click', async function(event) {
+      try {
+        await navigator.clipboard.writeText(input.value);
+        displayResult();
+      } catch(err) {
+        console.log('Failed to copy', err);
+        displayResult(false);
+      }
+    });
+
+    const domain = location.host || 'slash-create.vercel.app';
+    input.value = `https://${domain}/api/interactions`;
+  </script>
+</body>
+</html>
